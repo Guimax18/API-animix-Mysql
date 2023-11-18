@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@300;400&family=Inter:wght@200;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Work+Sans:wght@100;200;300;400;500;600;700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Work Sans';
+}
+
+
+
+
+@font-face {
+    font-family: 'dc1';
+    src: url('/public/assets/fonts/dc1.woff2');
+}
+
+@font-face {
+    font-family: 'dc2';
+    src: url('/public/assets/fonts/dc2.woff2');
+}
+
+@font-face {
+    font-family: 'dc3';
+    src: url('/public/assets/fonts/dc3.woff2');
+}
+
+@font-face {
+    font-family: 'dc4';
+    src: url('/public/assets/fonts/dc4.woff2');
+}
+
+@font-face {
+    font-family: 'dc5';
+    src: url('/public/assets/fonts/dc5.woff2');
+}
+
+@font-face {
+    font-family: 'dc6';
+    src: url('/public/assets/fonts/dc6.woff2');
+}
+
+
