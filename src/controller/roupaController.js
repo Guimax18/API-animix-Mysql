@@ -1,7 +1,10 @@
-import { buscarPorNome, listar, salvar, remover} from "../repository/roupaRepository.js";
-
+import { alterar, buscarPorNome, listar, salvar, remover, alterarImagem} from "../repository/roupaRepository.js";
+import multer from 'multer';
 import { Router } from "express";
 const endpoints = Router();
+
+const upload = multer({ dest: './storage' });
+
 
 endpoints.post('/roupa', async (req, resp) => {
     try {
@@ -79,6 +82,29 @@ endpoints.delete('/roupa/:id', async (req, resp) => {
     }
 })
 
+
+endpoints.put('/roupa/alterar/:id', async (req, resp) => {
+    try {
+        let id = req.params.id;
+        let r = await alterar(id, nome);
+        resp.status(202).send();
+    }
+    catch (err) {
+        resp.status(400).send({
+            erro: err.message
+        })
+    }
+});
+
+
+
+endpoints.put('/roupa/:id/imagem', upload.single('imagem') ,async (req, resp) => {
+    let id = req.params.id
+    let caminho = req.file.path;
+
+    let r = await alterarImagem(id, caminho);
+    resp.status(202).send();
+});
 
 
 

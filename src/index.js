@@ -10,6 +10,7 @@ servidor.use(express.json());
 
 servidor.use(roupaController);
 
+servidor.use('/storage', express.static('./storage'));
 
 
 const port = process.env.PORT;
